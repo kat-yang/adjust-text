@@ -1,0 +1,12 @@
+#删除每段开头的数字。在test1.txt里贴原稿。test2.txt是删除数字后的样子。
+
+import re
+
+infile=open('test1.txt','r')
+outfile=open ('test2.txt','w+')
+
+for eachline in infile:    
+     print >>outfile,re.sub('\d+','',eachline), 
+
+infile.close()    
+outfile.close()
